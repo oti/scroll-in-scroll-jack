@@ -1,0 +1,42 @@
+.scrollable {
+  @at-root {
+    & {
+      position: absolute;
+      right: 0;
+      overflow-y: auto;
+      @include pc {
+        top: 0;
+        width: 50%;
+        height: 100%;
+      }
+      @include sp {
+        top: 50%;
+        width: 100vw;
+        height: 50%;
+      }
+      .section-3 & {
+        background-color: #f7d600;
+      }
+      .section-4 & {
+        background-color: #96d74e;
+      }
+    }
+
+    .scrollable__inner {
+      padding: 20px;
+      img {
+        width: 100%;
+        height: auto;
+      }
+      p {
+        margin: 1em 0;
+        @include pc {
+          font-size: 1.5vw;
+        }
+        @include sp {
+          font-size: 4vw;
+        }
+      }
+    }
+  }
+}

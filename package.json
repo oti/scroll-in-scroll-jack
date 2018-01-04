@@ -1,0 +1,27 @@
+{
+  "name": "Scroll-in-ScrollJack",
+  "version": "1.0.0",
+  "description": "スクロールジャックしているコンテンツの中にスクロールできる要素があるんだなぁ",
+  "main": "index.html",
+  "scripts": {
+    "start": "concurrently \"npm run style\" \"npm run html\" \"npm run script\" \"npm run server\"",
+    "style": "node-sass src/style/style.scss docs/style.css -w",
+    "html": "pug src/html/index.pug -o docs/ -Pw",
+    "script": "watchify ./src/script/app.js -t babelify -o 'exorcist ./docs/app.js.map > ./docs/app.js' -d -v",
+    "server": "cd docs && python -m SimpleHTTPServer 8888"
+  },
+  "author": "@oti(https://twitter.com/o_ti)",
+  "license": "MIT",
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babelify": "^8.0.0",
+    "concurrently": "^3.5.1",
+    "exorcist": "^1.0.0",
+    "node-sass": "^4.7.2",
+    "pug-cli": "^1.0.0-alpha6",
+    "watchify": "^3.9.0"
+  }
+}

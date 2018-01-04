@@ -1,0 +1,7 @@
+.main {
+  @at-root {
+    & {
+      height: 0
+    }
+  }
+}

@@ -1,0 +1,7 @@
+.container {
+  @at-root {
+    & {
+      height: 0
+    }
+  }
+}

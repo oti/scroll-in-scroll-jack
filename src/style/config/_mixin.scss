@@ -1,0 +1,16 @@
+// MediaQueries
+@mixin sp($bp: 959px) {
+  @media (max-width: $bp) {
+    @content;
+  }
+}
+@mixin pc($bp: 960px) {
+  @media (min-width: $bp) {
+    @content;
+  }
+}
+@mixin between($min, $max) {
+  @media (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}
