@@ -15,20 +15,30 @@
       background-position: 50% 50%;
       background-size: cover;
       overflow: hidden;
-      transform: translate3d(0,100%,0);
-      transition: transform .25s ease;
-      &.section-1 { background-image: url(https://picsum.photos/960/540/?random) }
-      &.section-2 { background-image: url(https://picsum.photos/961/540/?random) }
-      &.section-3 { background-image: url(https://picsum.photos/960/541/?random) }
-      &.section-4 { background-image: url(https://picsum.photos/959/540/?random) }
-      &.section-5 { background-image: url(https://picsum.photos/960/539/?random) }
+      transform: translate3d(0, 100%, 0);
+      transition: transform 0.25s ease;
+      &.section-1 {
+        background-image: url(https://picsum.photos/960/540/?random);
+      }
+      &.section-2 {
+        background-image: url(https://picsum.photos/961/540/?random);
+      }
+      &.section-3 {
+        background-image: url(https://picsum.photos/960/541/?random);
+      }
+      &.section-4 {
+        background-image: url(https://picsum.photos/959/540/?random);
+      }
+      &.section-5 {
+        background-image: url(https://picsum.photos/960/539/?random);
+      }
 
       .is-1 &.section-1,
       .is-2 &.section-2,
       .is-3 &.section-3,
       .is-4 &.section-4,
       .is-5 &.section-5 {
-        transform: translate3d(0,0,0);
+        transform: translate3d(0, 0, 0);
       }
 
       // セクション移動した時に前のやつを画面上に流すためのアレ
@@ -36,30 +46,27 @@
       .is-3 &.section-1,
       .is-4 &.section-1,
       .is-5 &.section-1,
-
       .is-3 &.section-2,
       .is-4 &.section-2,
       .is-5 &.section-2,
-
       .is-4 &.section-3,
       .is-5 &.section-3,
-
       .is-5 &.section-4 {
-        transform: translate3d(0,-100%,0);
+        transform: translate3d(0, -100%, 0);
       }
 
       > h1 {
         color: white;
         font-size: 8vw;
         font-weight: bold;
-        text-shadow: 0 0 10px rgba(0,0,0, .5);
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
       }
 
       > p {
         color: white;
         font-size: 6vw;
         font-weight: bold;
-        text-shadow: 0 0 10px rgba(0,0,0, .5);
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         &.split {
           @include pc {
             font-size: 4vw;
