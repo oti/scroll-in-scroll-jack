@@ -1,27 +1,38 @@
 {
-  "name": "Scroll-in-ScrollJack",
-  "version": "1.0.0",
+  "private": true,
+  "name": "scroll-in-scroll-jack",
+  "version": "2.0.0",
   "description": "スクロールジャックしているコンテンツの中にスクロールできる要素があるんだなぁ",
-  "main": "index.html",
-  "scripts": {
-    "start": "concurrently \"npm run style\" \"npm run html\" \"npm run script\" \"npm run server\"",
-    "style": "node-sass src/style/style.scss docs/style.css -w",
-    "html": "pug src/html/index.pug -o docs/ -Pw",
-    "script": "watchify ./src/script/app.js -t babelify -o 'exorcist ./docs/app.js.map > ./docs/app.js' -d -v",
-    "server": "cd docs && python -m SimpleHTTPServer 8888"
-  },
-  "author": "@oti(https://twitter.com/o_ti)",
   "license": "MIT",
+  "scripts": {
+    "start": "parcel src/index.pug --open --out-dir .tmp",
+    "build": "parcel build src/index.pug --no-source-maps --public-url ./",
+    "prettier:fix": "prettier --write .",
+    "lint:html": "markuplint dist/*.html --ruleset ./markuplintrc",
+    "lint:css": "stylelint dist/*.css",
+    "validate:html": "html-validator --file=dist/index.html --verbose",
+    "test": "npm run lint:css & npm run lint:html & npm run validate:html"
+  },
+  "dependencies": {
+    "jquery": "^3.5.1"
+  },
   "devDependencies": {
-    "babel": "^6.23.0",
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-preset-env": "^1.6.1",
-    "babelify": "^8.0.0",
-    "concurrently": "^3.5.1",
-    "exorcist": "^1.0.0",
-    "node-sass": "^4.13.1",
-    "pug-cli": "^1.0.0-alpha6",
-    "watchify": "^3.9.0"
+    "@prettier/plugin-pug": "^1.8.1",
+    "autoprefixer": "^10.0.1",
+    "html-validator-cli": "^7.0.1",
+    "husky": "^4.3.0",
+    "markuplint": "^1.0.1",
+    "parcel-bundler": "^1.12.4",
+    "prettier": "^2.1.2",
+    "pretty-quick": "^3.0.2",
+    "pug": "^3.0.0",
+    "sass": "^1.26.11",
+    "stylelint": "^13.7.2",
+    "stylelint-config-recommended": "^3.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   }
 }
