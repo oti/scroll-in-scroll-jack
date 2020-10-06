@@ -1,24 +1,25 @@
 doctype html
-html(lang='ja')
+html(lang="en")
   head
-    meta(charset='utf-8')
-    title Scroll in ScrollJack
-    meta(name='viewport' content='width=device-width, initial-scale=1.0')
-    link(rel='stylesheet', href='style.css')
-    script(src='https://code.jquery.com/jquery-3.2.1.slim.min.js', integrity='sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=',crossorigin='anonymous')
+    meta(charset="utf-8")
+    title Scroll in Scroll Jack
+    meta(name="viewport", content="width=device-width")
+    link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
+    link(rel="stylesheet", href="style/style.scss")
+    script(src="script/script.js")
   body.is-1
     .container
-      header.section.section-1
-        h1 Scroll in ScrollJack
+      .section.section-1
+        h1 Scroll in Scroll Jack
       main.main
-        section.section.section-2
+        .section.section-2
           p WHY ScrollJack?
-        section.section.section-3
-          p.split This area are jacked.
+        .section.section-3
+          p.split This area are scroll jacked.
           .scrollable
             .scrollable__inner
-              p: strong This area are no-jacked.
-              img(src='https://picsum.photos/500/300/?random')
+              p: strong This area are not scroll jacked.
+              img(src="https://picsum.photos/500/300/?random", alt="")
               p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non est cursus, congue libero sit amet, sodales quam. Sed ut malesuada nulla. Suspendisse id vestibulum felis. Nunc egestas, quam sed dignissim lobortis, mauris erat sollicitudin dui, ac faucibus nulla urna et sapien. Fusce non ultrices mi. Nunc lacinia, nibh ut elementum eleifend, massa lectus viverra justo, condimentum ornare odio ex id ex. Vivamus non vehicula tellus.
 
               p Praesent tincidunt fermentum tincidunt. Suspendisse nec congue mi. Proin lobortis enim erat, vitae bibendum risus condimentum vitae. Mauris nec vulputate dolor, vulputate pretium velit. Pellentesque tempor nulla quis semper vehicula. Donec non dui vel elit ultricies ultricies mattis ac mi. In ultrices risus ipsum, vitae vulputate arcu molestie eu. Aliquam erat volutpat. Vivamus sit amet diam pulvinar, tempus leo eu, maximus diam. Etiam in pretium odio. Nunc nibh mi, sollicitudin a turpis sed, tempor interdum dolor.
@@ -38,16 +39,16 @@ html(lang='ja')
               p Fusce vestibulum molestie tempus. Sed vel mollis est. In nec justo turpis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In ac pretium ex. Phasellus at augue tellus. Sed dui mi, auctor eu auctor at, hendrerit nec nisi. Vivamus ullamcorper leo eget lacus molestie laoreet. Vivamus eu sagittis magna, ac dignissim magna. Suspendisse vulputate convallis urna, et convallis orci vestibulum sed. Nam tincidunt congue leo, vel vestibulum lorem tincidunt egestas. Nam ut velit elementum, suscipit est id, rutrum nunc. Donec eget nisi enim.
 
               p In eu malesuada diam. Nam mattis leo vitae nisl volutpat ornare. Etiam sit amet eros felis. Aenean tristique ex id elit pulvinar imperdiet. Nullam quis lectus at lorem varius sagittis vitae eget leo. Maecenas sem augue, accumsan eget purus ut, eleifend porttitor tellus. Etiam eu sem luctus, vulputate justo quis, finibus sem. Morbi aliquam metus sed dapibus viverra. Proin id rhoncus nunc. Quisque et sem eget est sagittis mattis vitae in lorem. Nulla varius porttitor ex non vehicula.
-              img(src='https://picsum.photos/501/300/?random')
+              img(src="https://picsum.photos/501/300/?random", alt="")
           .scrollhint
             .scrollhint__top
             .scrollhint__bottom
-        section.section.section-4
-          p.split This area are jacked.
+        .section.section-4
+          p.split This area are scroll jacked.
           .scrollable
             .scrollable__inner
-              p: strong This area are no-jacked.
-              img(src='https://picsum.photos/499/300/?random')
+              p: strong This area are not scroll jacked.
+              img(src="https://picsum.photos/499/300/?random", alt="")
               p Nullam posuere mauris eget magna rutrum feugiat. Sed dictum placerat ex nec rhoncus. Suspendisse potenti. Phasellus vestibulum ante mauris, et egestas ligula pulvinar sed. Duis mattis, dui sit amet lacinia porttitor, tellus justo sodales magna, ut feugiat urna tellus eu velit. Aliquam ac eleifend quam, ut accumsan erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sit amet velit a nibh vehicula consectetur nec vitae odio. Aliquam erat volutpat. Aliquam placerat dignissim iaculis. Nullam pharetra eros nec mi ultricies porta. Integer nec suscipit metus, id elementum nisl. Phasellus consequat orci urna, sed venenatis lacus sollicitudin eu.
 
               p Morbi ut ipsum pretium, faucibus tortor sed, elementum diam. Donec commodo mi nec suscipit tempor. Ut efficitur sagittis libero id porttitor. Aliquam cursus lorem in hendrerit mollis. In porta, risus sed dapibus convallis, sem metus pulvinar justo, ac sodales sapien tellus quis risus. Morbi a lectus placerat, aliquet nisl ultrices, luctus tellus. Quisque non lacus eget nisi lobortis maximus vel et massa. Sed interdum tortor sed enim congue, a convallis nisi placerat. Mauris facilisis sodales est a tempor. Suspendisse et massa elit. Nullam quam diam, luctus at convallis non, rutrum eu odio. Cras et tellus erat. Pellentesque vitae congue libero. Ut justo massa, lacinia eget dictum quis, vehicula ac velit. Nunc massa felis, hendrerit a libero vitae, consectetur pulvinar odio. Sed et pretium dui, ac iaculis leo.
@@ -69,13 +70,12 @@ html(lang='ja')
               p Fusce consectetur aliquam mi vitae tincidunt. Etiam non orci in ipsum hendrerit ultrices. Morbi convallis eleifend aliquam. Nam non iaculis quam. Phasellus ullamcorper nibh velit, at ullamcorper neque bibendum at. Etiam et ante nec erat lacinia volutpat rhoncus vel erat. Mauris dui arcu, varius eu nibh rhoncus, luctus rhoncus ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi turpis urna, interdum nec diam sit amet, rutrum aliquam lorem. Pellentesque consectetur a nisi in aliquet. Maecenas tincidunt viverra interdum. Vestibulum congue, felis et varius pretium, neque lectus pretium mauris, vel lobortis metus lectus id sem. Quisque et quam enim. Praesent feugiat lorem interdum nunc facilisis, quis volutpat lorem luctus. Morbi massa justo, venenatis nec nisl sit amet, congue convallis nisi.
 
               p Vivamus metus est, auctor a eleifend quis, sodales id justo. Integer ornare suscipit mauris, ac suscipit nulla varius ut. Donec egestas pharetra lorem, sed sagittis mi. Vestibulum ullamcorper leo magna, ut faucibus orci euismod ut. Donec laoreet purus elit, facilisis maximus metus euismod at. Vestibulum at nunc eu nibh commodo posuere. Suspendisse ultricies aliquam leo, sed rhoncus odio luctus in. Vivamus eros purus, mattis sit amet malesuada sed, congue a neque. Maecenas ac ex sit amet elit luctus iaculis eu at lectus. Donec tortor augue, aliquam vitae dapibus nec, accumsan sed tellus. Donec a velit lacinia, pellentesque felis hendrerit, finibus odio. Etiam dolor dui, aliquet at tempus sit amet, pretium luctus lectus. Mauris in consectetur dui. Cras vel nibh eu mauris ornare euismod laoreet et risus.
-              img(src='https://picsum.photos/500/299/?random')
+              img(src="https://picsum.photos/500/299/?random", alt="")
           .scrollhint
             .scrollhint__top
             .scrollhint__bottom
       footer.section.section-5
         p
-          | NEVER ScrollJack.
+          | NEVER Scroll Jack.
           br
-          a(href='https://github.com/oti/scroll-in-scrolljack') https://github.com/oti/scroll-in-scrolljack
-    script(src='app.js')
+          a(href="https://github.com/oti/scroll-in-scroll-jack") https://github.com/oti/scroll-in-scroll-jack

@@ -1,25 +1,25 @@
 @charset 'UTF-8';
 
 // scssコンパイル用メタファイル
-@import 'config/var';
-@import 'config/function';
-@import 'config/placeholder';
-@import 'config/mixin';
+@import "config/var";
+@import "config/function";
+@import "config/placeholder";
+@import "config/mixin";
 
 // バナー
-@import 'config/banner';
+@import "config/banner";
 
-@import 'foundation/font-face';
+@import "foundation/font-face";
 
 // 男は黙ってMinimum Reset CSS
-@import 'foundation/reset';
+@import "foundation/reset";
 
 // 下地
-@import 'foundation/base';
+@import "foundation/base";
 
 // モジュールたち
-@import 'module/container';
-@import 'module/main';
-@import 'module/scrollable';
-@import 'module/scrollhint';
-@import 'module/section';
+@import "module/container";
+@import "module/main";
+@import "module/scrollable";
+@import "module/scrollhint";
+@import "module/section";

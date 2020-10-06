@@ -29,12 +29,18 @@
     .scrollhint__top {
       opacity: 0;
       top: 0;
-      background-image: linear-gradient(to bottom,scrim-gradient($shadow_color, $shadow_depth));
+      background-image: linear-gradient(
+        to bottom,
+        scrim-gradient($shadow_color, $shadow_depth)
+      );
     }
     .scrollhint__bottom {
       opacity: 1;
       bottom: 0;
-      background-image: linear-gradient(to top,scrim-gradient($shadow_color, $shadow_depth));
+      background-image: linear-gradient(
+        to top,
+        scrim-gradient($shadow_color, $shadow_depth)
+      );
     }
   }
 }

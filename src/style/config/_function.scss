@@ -22,7 +22,11 @@
   $rgba: "#{red($color)},#{green($color)},#{blue($color)}";
   $color-stops: ();
   @each $alpha, $stop in $scrim-gradient {
-    $color-stops: append($color-stops, unquote("rgba(#{$rgba}, #{$alpha * $opacity}) #{$stop}"), "comma");
+    $color-stops: append(
+      $color-stops,
+      unquote("rgba(#{$rgba}, #{$alpha * $opacity}) #{$stop}"),
+      "comma"
+    );
   }
   @return $color-stops;
 }
